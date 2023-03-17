@@ -1,15 +1,13 @@
 import tkinter as tk
 
-# Creamos la ventana principal
 root = tk.Tk()
 root.title("LPBB Simulator")
 
-# Variables para llevar la cuenta de los puntos
 puntos_equipo1 = 0
 puntos_equipo2 = 0
 
 perdiodo = 0
-# Funciones para actualizar los puntos
+
 def actualizar_puntos_equipo1(puntos):
     global puntos_equipo1
     puntos_equipo1 += puntos
@@ -25,7 +23,7 @@ def actualizar_periodo(perdiodo2):
     perdiodo += perdiodo2
     lbl_periodo.config(text=str(perdiodo))
 
-#Periodo
+
 lbl_periodo = tk.Label(root, text="Periodo: ", font=("Arial", 20))
 lbl_periodo.grid(row=0, column=0, padx=10, pady=10)
 
@@ -38,7 +36,7 @@ lbl_periodo.grid(row=0, column=2, padx=10, pady=10)
 btn_periodo = tk.Button(root, text=">", font=("Arial", 20), command=lambda: actualizar_periodo(1))
 btn_periodo.grid(row=0, column=3, padx=10, pady=10)
 
-# Creamos los widgets necesarios
+
 lbl_equipo1 = tk.Label(root, text="Equipo 1", font=("Arial", 20))
 lbl_equipo1.grid(row=1, column=0, padx=10, pady=10)
 
@@ -93,5 +91,5 @@ lbl_puntos_equipo1.grid(row=2, column=1, padx=10, pady=10)
 lbl_puntos_equipo2 = tk.Label(root, text="0", font=("Arial", 30))
 lbl_puntos_equipo2.grid(row=2, column=3, padx=10, pady=10)
 
-# Iniciamos el bucle principal
+
 root.mainloop()
